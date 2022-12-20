@@ -34,7 +34,11 @@ jobs:
       continue-on-error: false
       run: |
         mkdir testresults
-        pip install pytest && pytest Tests/unit_tests --junitxml=./testresults/test-results.xml && pip install pycmd && py.cleanup Tests/
+        pip install pytest 
+        pip install pytest-cov
+        pytest --cov=./ --cov-config=.coveragerc Tests/unit_tests --junitxml=./testresults/test-results.xml
+        pip install pycmd
+        py.cleanup Tests/
 
     # Uploading unit test results to artifact store
     - name: Upload unit test results to Artifact
