@@ -39,6 +39,7 @@ jobs:
         pytest --cov=./ --cov-config=.coveragerc --cov-report term-missing Tests/unit_tests --junitxml=./testresults/test-results.xml
         pip install pycmd
         py.cleanup Tests/
+    
     - uses: actions/checkout@v2
         with:
           fetch-depth: 0
