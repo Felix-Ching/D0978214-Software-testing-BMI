@@ -13,7 +13,7 @@ env:
   HOSTINGPLANNAME: "D0978214-Software-testing-BMI-plan"
   APPINSIGHTLOCATION: "East Asia"
   SKU: "S1 Standard"
-  SONAR_HOST_URL:"http://20.78.10.108"
+  SONAR_HOST_URL: "http://20.78.10.108"
  
 jobs:
   Build:
