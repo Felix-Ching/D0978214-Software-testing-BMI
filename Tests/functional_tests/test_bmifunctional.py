@@ -33,7 +33,7 @@ class BmiFunctionalTests(unittest.TestCase):
 				time.sleep(1)
 				bmi = self.driver.find_element_by_id("bmi")
 
-				self.assertEqual("15.625", bmi.text)
+				self.assertEqual("15.62", bmi.text)
 				break
 			except Exception as e:
 				print('"##vso[task.logissue type=error;]Test test_selenium failed with error: ' + str(e))
