@@ -26,14 +26,14 @@ class BmiFunctionalTests(unittest.TestCase):
 				height = self.driver.find_element_by_id("id_height")
 				weight = self.driver.find_element_by_id("id_weight")
 
-				height.send_keys('1.7')
-				weight.send_keys('60')
+				height.send_keys('1.6')
+				weight.send_keys('40')
 				weight.submit()
 
 				time.sleep(1)
 				bmi = self.driver.find_element_by_id("bmi")
 
-				self.assertEqual("20.76", bmi.text)
+				self.assertEqual("15.625", bmi.text)
 				break
 			except Exception as e:
 				print('"##vso[task.logissue type=error;]Test test_selenium failed with error: ' + str(e))
