@@ -37,4 +37,24 @@ class ViewTest(TestCase):
         """Tests the home page."""
         response = self.client.post('/', {'height':1.7,'weight':"60"})
         self.assertContains(response, '20.76', 1, 200, html=True)
+"""
+    def test_unit_heightN01(self):
+        response = self.client.post('/', {'height':0,'weight':"60"})
+        self.assertContains(response, "請輸入合理範圍的身高!", 1, 200, html=True)
 
+    def test_unit_height25(self):
+        response = self.client.post('/', {'height':2.6,'weight':"60"})
+        self.assertContains(response, "請輸入合理範圍的身高!", 1, 200, html=True)
+
+    def test_unit_weight149(self):
+        response = self.client.post('/', {'height':1.7,'weight':"14"})
+        self.assertContains(response, "請輸入合理範圍的體重!", 1, 200, html=True)
+
+    def test_unit_weight201(self):
+        response = self.client.post('/', {'height':1.7,'weight':"201"})
+        self.assertContains(response, "請輸入合理範圍的體重!", 1, 200, html=True)
+
+    def test_unit_num(self):
+        response = self.client.post('/', {'height':1.7,'weight':"abc"})
+        self.assertContains(response, "請輸入數字!", 1, 200, html=True)
+"""
