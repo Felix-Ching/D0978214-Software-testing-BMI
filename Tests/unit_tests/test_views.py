@@ -41,7 +41,7 @@ class ViewTest(TestCase):
     def test_unit_height0(self):
         """Tests the home page."""
         response = self.client.post('/', {'height':0,'weight':"60"})
-        self.assertContains(response, "請輸入合理範圍的身高!", 1, 200, html=True)
+        self.assertContains(response, '請輸入合理範圍的身高!', 1, 200, html=True)
 
     def test_unit_height25(self):
         """Tests the home page."""
