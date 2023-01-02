@@ -41,7 +41,8 @@ class BmiFunctionalTests(unittest.TestCase):
 				weight.send_keys('60')
 				weight.submit()
 
-				time.sleep(2)
+				time.sleep(1)
+				bmi = self.driver.find_element_by_id("bmi")
 
 				self.assertEqual("20.76", bmi.text)
 				break
