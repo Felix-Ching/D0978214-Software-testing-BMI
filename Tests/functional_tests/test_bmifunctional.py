@@ -35,6 +35,8 @@ class BmiFunctionalTests(unittest.TestCase):
 
 				self.assertEqual("15.62", bmi.text)
 				#test2
+				height = self.driver.find_element_by_id("id_height")
+				weight = self.driver.find_element_by_id("id_weight")
 				height.send_keys('1.7')
 				weight.send_keys('60')
 				weight.submit()
