@@ -41,7 +41,7 @@ class BmiFunctionalTests(unittest.TestCase):
 				weight.send_keys('60')
 				weight.submit()
 
-				time.sleep(1)
+				time.sleep(2)
 
 				self.assertEqual("20.76", bmi.text)
 				break
